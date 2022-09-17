@@ -197,6 +197,7 @@ button {
     padding: 0 20px;
   }
   .card {
-    /* -direction: column; */
+    display: block;
+    
   }
 }

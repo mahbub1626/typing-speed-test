@@ -39,7 +39,6 @@ const typeController = (e) => {
   }
 
   userText += newLetter;
-
   const newLetterCorrect = validate(newLetter);
 
   if (newLetterCorrect) {
@@ -101,6 +100,7 @@ const closeModal = () => {
   resultModal.classList.toggle("hidden");
 };
 
+
 const start = () => {
   // If already started, do not start again
   if (startTime) return;
@@ -110,6 +110,7 @@ const start = () => {
 
   const startCountdown = setInterval(() => {
     countdownOverlay.innerHTML = `<h1>${count}</h1>`;
+
 
     // finished timer
     if (count == 0) {
@@ -136,7 +137,6 @@ setInterval(() => {
   const currentTime = new Date().getTime();
   const timeSpent = (currentTime - startTime) / 1000;
   const timeSpentInt = parseInt(timeSpent);
-
 
   document.getElementById("show-time").innerHTML = `${startTime ? timeSpentInt : 0} seconds`;
 }, 1000);
